@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Schoolboy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles-base.css">
+    <link rel="shortcut icon" href="img/icon-app-schoolBoy.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="boxMessage" class="fixed z-50 w-full max-w-md transform top-1 left-2/4 -translate-x-2/4"></div>
+    <aside class="fixed z-40 hidden w-full h-full bg-black animate-fadeIn modalCourses bg-opacity-20">
+        <div
+            class="absolute bottom-0 flex items-center justify-center w-full text-center bg-red-500 ctn-form sm:w-1/2 h-1/2 sm:h-full">
+            <div class="p-2 bg-gray-100 rounded-lg form bg-opacity-20 max-w-[320px] w-full">
+                <div class="my-1 text-xl font-bold text-white title-form-courses">
+                    <p>Agrega un curso</p>
+                </div>
+                <form action="" id="formCourse" class="p-5 mx-5 my-1 bg-gray-200 rounded-md">
+                    <div class="ctn-input-name">
+                        <input type="text" name="nameCourse" id="" class="input-form">
+                    </div>
+                    <button type="submit" class="bg-blue-500 btn">Agregar</button>
+                </form>
+            </div>
+            <button class="absolute bg-red-600 closeModalCourse top-1 right-1 btn">X</button>
+        </div>
+    </aside>
+    <header class="sticky top-0 flex flex-wrap items-center justify-between bg-red-500">
+        <div class="flex-1 p-5">
+            <p>
+                <span class="font-bold text-white">My</span>
+                <span class="p-2 text-xl font-black bg-white rounded-full">App <b
+                        class="text-blue-600">Schoolboy</b></span>
+            </p>
+        </div>
+        <div class="p-5 sm:hidden sm:w-auto">
+            <button class="relative btn" id="btn-menu-responsive">
+                Menu
+                <span class="absolute w-4 h-4 bg-blue-500 rounded-full -top-1 -right-1"></span>
+                <span class="absolute w-4 h-4 bg-blue-600 rounded-full -top-1 -right-1 animate-ping"></span>
+            </button>
+        </div>
+        <div id="menuHtml"
+            class="hidden w-full my-2 text-center transition duration-500 menu sm:w-auto sm:bg-transparent sm:block">
+            <nav>
+                <ul class="items-center sm:flex">
+                    <li id="btnOpenAside"
+                        class="px-4 py-2 mx-1 font-bold text-white duration-100 bg-blue-800 border-b-2 border-transparent border-white cursor-pointer sm:mx-0 hover:bg-blue-600 bg-opacity-6 hover:rounded-xl">
+                        Agrega un Curso</li>
+                    <a href="#">
+                        <li
+                            class="px-4 py-2 mx-1 my-1 font-bold duration-500 border-b-2 border-transparent cursor-pointer sm:mx-auto hover:text-white hover:border-b-2 hover:border-white hover:bg-gray-200 hover:bg-opacity-10">
+                            Repositorio</li>
+                    </a>
+                    <a href="#">
+                        <li
+                            class="px-4 py-2 mx-1 font-bold duration-500 border-b-2 border-transparent cursor-pointer sm:mx-auto hover:text-white hover:border-b-2 hover:border-white hover:bg-gray-200 hover:bg-opacity-10">
+                            Mas Proyectos</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="w-full max-w-3xl pt-5 mx-auto text-center">
+            <div class="ctn-form">
+                <div class="title-form">
+                    <p class="pb-2 mx-5 text-2xl font-black border-b-2">! Añade un Estudiante ¡</p>
+                </div>
+                <div class="p-5 mx-5 my-2 bg-gray-100 rounded-lg form">
+                    <form action="" id="formStudent">
+                        <div class="ctn-input-name">
+                            <input type="text" name="formName" placeholder="Nombres Completos" class="input-form">
+                        </div>
+                        <div class="ctn-input-secondname">
+                            <input placeholder="Apellidos" name="formApel" type="text" class="input-form">
+                        </div>
+                        <div class="ctn-input-email">
+                            <input type="email" name="formEmail" id="formEmail" placeholder="Correo Electrónico"
+                                class="input-form">
+                        </div>
+                        <div class="ctn-input-TI">
+                            <input type="number" name="formTI" id="formTI" class="input-form"
+                                placeholder="Numero de Identidad">
+                        </div>
+                        <div class="text-left ctn-input-course">
+                            <label for="formCourse">Curso</label>
+                            <select name="formCourse" id="formCourseSelect" class="input-form">
+                                <option value="">Seleccionar</option>
+                            </select>
+                        </div>
+                        <div class="text-left ctn-sexuality">
+                            <label for="formSex">Sexo</label>
+                            <select name="formSex" id="formSex" class="input-form">
+                                <option value="">Seleccionar</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="text-left ctn-input-date">
+                            <label for="formDate">Fecha de Nacimiento</label>
+                            <input type="date" name="formDate" id="formDate" class="input-form">
+                        </div>
+                        <div class="ctn-btn-submit">
+                            <button type="submit"
+                                class="px-4 py-2 text-lg font-bold text-red-500 transition duration-500 bg-white border-4 border-transparent rounded-lg hover:border-gray-500 hover:bg-red-500 hover:text-white">Agregar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="max-w-4xl pb-4 m-2 bg-gray-200 rounded-lg md:mx-auto">
+            <div class="ctn-box-students">
+                <div class="title-students">
+                    <p class="p-2">Cursos con Estudiantes</p>
+                </div>
+                <div id="students"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js" type="module"></script>
+</body>
+
+</html>
